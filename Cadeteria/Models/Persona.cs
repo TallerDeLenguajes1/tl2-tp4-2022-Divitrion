@@ -7,15 +7,16 @@ namespace Cadeteria.Models
 {
     public class Persona
     {
-        public string nombre;
-        protected string direccion;
-        protected string telefono;
+        private string nombre;
+        private string direccion;
+        private string telefono;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
 
         public Persona()
         {
-            this.nombre="x";
-            this.direccion="direccion";
-            this.telefono="telefonito";
         }
     }
 }
