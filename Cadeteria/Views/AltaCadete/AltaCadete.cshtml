@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "AltaCadete";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @using(Html.BeginForm("PostMethod", "Listado", FormMethod.Post))
+    {
+        <input type="text" name="Nombre">
+    }
+</div>
