@@ -8,7 +8,7 @@ namespace Cadeteria.Models
     public class Cadete : Persona
     {
         public List<Pedido> listadoPedidos;
-        public int id;
+        public int id = 0;
 
         public void JornalACobrar()
         {
@@ -18,7 +18,6 @@ namespace Cadeteria.Models
         public Cadete()
         {
             listadoPedidos=new List<Pedido>();
-            id++;
         }
 
         public void recibirPedido(Pedido pedido)

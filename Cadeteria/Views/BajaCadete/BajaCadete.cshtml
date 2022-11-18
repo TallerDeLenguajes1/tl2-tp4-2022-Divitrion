@@ -1,16 +1,17 @@
-@model List<Cadeteria.Models.Cadete>
 @{
-    ViewData["Title"] = "Listado";
+    ViewData["Title"] = "BajaCadete";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<table>
+<div>
+    <table>
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>CantPedidos</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -24,12 +25,9 @@
         }
     </tbody>
 </table>
-
-<section class="botones">
-    <section class="boton">
-        <a href="AltaCadete">AltaCadete</a>
-    </section>
-    <section class="boton">
-        <a href="BajaCadete">BajaCadete</a>
-    </section>
-</section>
+<h2>Ingrese la id a borrar</h2>
+@using(Html.BeginForm("Borrar", "Listado", FormMethod.Post))
+{
+    <input type="text" name="id">
+}
+</div>
